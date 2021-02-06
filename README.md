@@ -89,4 +89,7 @@ Now you can check you're working on that new branch where you can do whatever yo
 
     git branch
 
+Committing works fine, but to push, you'll need to follow the advice given in the error message after `git push`:
+
+    git push --set-upstream origin mycrazytest
 
