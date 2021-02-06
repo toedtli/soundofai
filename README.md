@@ -98,4 +98,11 @@ Now when you're satisfied and your crazy idea is production ready, you might wan
     git checkout main
     git merge mycrazytest
 
+To delete the branch mycrazytest (make sure everything is merged into the main branch first), you might have to do it both locally and remotely. To remove the local branch:
+
+     git branch -d mycrazytest
+
+and to remove the global branch:
+    
+     git push origin --delete mycrazytest
 
