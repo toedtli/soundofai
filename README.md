@@ -94,3 +94,8 @@ Committing works fine, but to push, you'll need to follow the advice given in th
     git push --set-upstream origin mycrazytest
 
 Now when you're satisfied and your crazy idea is production ready, you might want to merge your branch `mycrazytest` into the main (or master) branch:
+
+    git checkout main
+    git merge mycrazytest
+
+
