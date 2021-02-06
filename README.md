@@ -52,6 +52,30 @@ Commiting files is done by "adding" them locally to your staging area, committin
     cd <yourfamilyname>
     # (create some files here, e.g. embeddings.ipynb)
     git add embeddings.ipynb
+    
+At this point it is useful use `git status` to check that you are *not committing files you should not change*, e.g. files in other user's subdirectories.
+
     git commit -m "Write your commit message here"
     git push
 
+If you get an error message 
+
+    fatal: The current branch main has no upstream branch.
+    To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main`
+    git push
+
+then this is your chance to give your branch a meaningful name! use `yourname_topic`, and enter 
+    
+    git push --set-upstream origin replacethiswithyourfamilyname_replacethiswithausefulstring
+
+If you get
+
+    git@github.com: Permission denied (publickey).
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+please [contact us](beat.toedtli@ost.ch). 
