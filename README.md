@@ -102,7 +102,9 @@ To delete the branch mycrazytest (make sure everything is merged into the main b
 
      git branch -d mycrazytest
 
-and to remove the global branch:
+and to remove the remote branch:
     
      git push origin --delete mycrazytest
+
+You may check that the branch is gone, say, on github.
 
