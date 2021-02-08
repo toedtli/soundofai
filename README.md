@@ -1,21 +1,21 @@
 # Git Tutorial
 ## TL;DR
-Here we give some guidelines on how to manage and contribute your code to the [Sound of AI Github](https://github.com/TheSoundOfAIOSR/thesoundofaiosr.github.io).
+Here we give some guidelines on how to manage and contribute your code to the [Sound of AI Github](https://github.com/TheSoundOfAIOSR/rg_text_to_sound).
 ### Preliminaries
 This document is in the making- we welcome suggestions for changes! Links currently refer to [my personal git repo](https://github.com/toedtli/soundofai), but tell me if this is still so when it shoudldn't anymore!
 
 ## Structure of the sound of ai git
-In the text2sound working group, we'll have the following directory structure:
-
-      └───text2sound-subgroup
-            ├───playground
+In the [text2sound repository](https://github.com/TheSoundOfAIOSR/rg_text_to_sound), we'll have the following directory structure:
+    
+    [root of text2sound repository]
+      └───playground
             │   ├───user1
             │   └───user2
             └───production
-     └───other subgroups 
+
 ### Where to place your code
-- Please place all your code in your own user directory. 
-- You are free to manage your subfolder as you like, but please be careful not to push changes to other user's folders!
+- In playground, please place all your code in your own user directory. 
+- In playground you are free to manage your subfolder as you like, but please be careful not to push changes to other user's folders!
 - Please create a Readme.md file in your directory- a text file describing the contents of your subfolder. 
 
 ### Getting started with git - experts skip this
@@ -83,7 +83,7 @@ please [contact us](beat.toedtli@ost.ch).
 #### Working with branches
 To make sure you're working on your entirely separate code base, with no danger of pushging file changes for files other authors are working on, branches are useful! To create your own branch of a repository:
 
-    git checkout -b mycrazytest
+    git checkout -b yourname_topic
 
 Now you can check you're working on that new branch where you can do whatever you want:
 
@@ -91,20 +91,27 @@ Now you can check you're working on that new branch where you can do whatever yo
 
 Committing works fine, but to push, you'll need to follow the advice given in the error message after `git push`:
 
-    git push --set-upstream origin mycrazytest
+    git push --set-upstream origin yourname_topic
 
-Now when you're satisfied and your crazy idea is production ready, you might want to merge your branch `mycrazytest` into the main (or master) branch:
+Now when you're satisfied and your code is production ready, you might want to notify that it's time to merge it to the main branch if you do not have permission to do it yourself. To do so, you can perform a pull request
+
+    git request-pull main .
+
+where in this case, `main` is the branch in which the code needs to be merged.  
+  
+
+If you have the permissions to merge branches, you can merge `yourname_topic` into the main (or master) branch (and the previous step may be optional):
 
     git checkout main
-    git merge mycrazytest
+    git merge yourname_topic
 
-To delete the branch mycrazytest (make sure everything is merged into the main branch first), you might have to do it both locally and remotely. To remove the local branch:
+To delete the branch `yourname_topic` (make sure everything is merged into the main branch first), you might have to do it both locally and remotely. To remove the local branch:
 
-     git branch -d mycrazytest
+     git branch -d yourname_topic
 
 and to remove the remote branch:
     
-     git push origin --delete mycrazytest
+     git push origin --delete yourname_topic
 
 You may check that the branch is gone, say, on github.
 
