@@ -115,3 +115,5 @@ and to remove the remote branch:
 
 You may check that the branch is gone, say, on github.
 
+#### Recommendations for Github Repo Administrators
+In our repository, go to Settings->Branches. Add a branch protection rule to the main (or master) branch requiring pull request reviews before merging to the main (or master) branch. This way no contributor can accidentally create a new version of the main branch. We suggest that only coordinators should  merge into the master branch, while contributors are free to merge between their own branches.
