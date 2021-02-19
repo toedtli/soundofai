@@ -25,7 +25,7 @@ Git is a widely used versioning control system. [Lots of tutorials](https://www.
 Please use a [cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/) template for your directory structure if possible. The [data science template](https://drivendata.github.io/cookiecutter-data-science/) might be useful:
 
 	#activate your local virtual environment if you have one, then:
-	cd text2sound-subgroup\playground\<yourfamilyname>
+	cd text2sound-subgroup\playground\<firstname_lastname>
 	pip install cookiecutter
 	cookiecutter https://github.com/drivendata/cookiecutter-data-science
 
